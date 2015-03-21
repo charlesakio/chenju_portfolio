@@ -1,0 +1,8 @@
+machine:
+  python:
+    version: pypy-2.2.1
+notify:
+  webhooks:
+    # A list of hook hashes, containing the url field
+    # gitter hook
+    - url: https://webhooks.gitter.im/e/cc8092440ecab960239b

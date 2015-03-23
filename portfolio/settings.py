@@ -8,15 +8,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
-from logentries import LogentriesHandler
-import logging
 import os
 import dj_database_url
 
-log = logging.getLogger('logentries')
-log.setLevel(logging.INFO)
-# Note if you have set up the logentries handler in Django, the following line is not necessary
-log.addHandler(LogentriesHandler('a53c0928-0975-4ebf-950d-44211f21fc5b'))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -35,6 +29,9 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TEMPLATE_DIRS = (
+    "./portfolio/templates",
+)
 
 # Application definition
 

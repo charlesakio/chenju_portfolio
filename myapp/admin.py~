@@ -12,7 +12,8 @@ admin.site.register(models.Entry, EntryAdmin)
 admin.site.register(models.Tag)
 
 
-
-
+class TestAdmin(admin.ModelAdmin):
+    list_display = ("title", "body")
    
 
+admin.site.register(models.Testhis, TestAdmin)
